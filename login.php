@@ -29,7 +29,7 @@
     if($row['lpa_user_username'] == $uName) {
       if($row['lpa_user_password'] == $uPassword) {
         $_SESSION['authUser'] = $row['lpa_user_ID'];
-        header("Location: /");
+        header("Location: index.php");
         exit;
       }
     }

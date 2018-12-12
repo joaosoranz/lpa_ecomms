@@ -132,7 +132,7 @@ function build_navBlock() { ?>
  * @param int $strength
  * @return string
  */
-function gen_ID($prefix='',$length=10, $strength=0) {
+function gen_ID($prefix='',$length=5, $strength=0) {
   $final_id='';
   for($i=0;$i< $length;$i++)
   {

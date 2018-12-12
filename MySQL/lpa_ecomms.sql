@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `lpa_stock` (
   `lpa_stock_desc` text NOT NULL,
   `lpa_stock_onhand` varchar(5) NOT NULL,
   `lpa_stock_price` decimal(7,2) NOT NULL,
-  `lpa_image` varchar(255) NOT NULL,
+  `lpa_stock_image` varchar(255) NOT NULL,
   `lpa_stock_status` char(1) NOT NULL,
   PRIMARY KEY (`lpa_stock_ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=129 ;
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `lpa_stock` (
 -- Dumping data for table `lpa_stock`
 --
 
-INSERT INTO `lpa_stock` (`lpa_stock_ID`, `lpa_stock_name`, `lpa_stock_desc`, `lpa_stock_onhand`, `lpa_stock_price`, `lpa_image`, `lpa_stock_status`) VALUES
+INSERT INTO `lpa_stock` (`lpa_stock_ID`, `lpa_stock_name`, `lpa_stock_desc`, `lpa_stock_onhand`, `lpa_stock_price`, `lpa_stock_image`, `lpa_stock_status`) VALUES
 (123, 'Computer', 'Computer system', '4', '1500.00', 'Computer.png', 'a'),
 (124, 'Apple iPad 4', 'This is an apple iPad 4', '4', '250.00', 'iPad.png', 'D'),
 (125, 'Mini Display Port to VGA', 'Cable for Apple', '3', '33.00', '', 'a'),
