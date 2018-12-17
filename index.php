@@ -1,6 +1,7 @@
 <?PHP
 
   $authChk = true;
+
   require('app-lib.php');
   build_header($displayName);
 ?>

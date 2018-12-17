@@ -11,6 +11,7 @@
   }
   build_header($displayName);
 ?>
+
   <?PHP build_navBlock(); ?>
   <div id="content">
     <div class="PageTitle">Sales Management Search</div>
@@ -22,8 +23,7 @@
       <div class="displayPane">
         <div class="displayPaneCaption">Search:</div>
         <div>
-          <input name="txtSearch" id="txtSearch" placeholder="Search Sales"
-          style="width: calc(100% - 115px)" value="<?PHP echo $txtSearch; ?>">
+          <input name="txtSearch" id="txtSearch" placeholder="Search Sales" style="width: calc(100% - 115px)" value="<?PHP echo $txtSearch; ?>">
           <button type="button" id="btnSearch">Search</button>
           <button type="button" id="btnAddRec">Add</button>
         </div>
@@ -50,9 +50,12 @@
          FROM
             lpa_invoices
          WHERE
-            lpa_inv_no LIKE '%$txtSearch%' /*AND lpa_inv_status <> 'D'*/
-         OR
-            lpa_inv_client_name LIKE '%$txtSearch%' /*AND lpa_inv_status <> 'D'*/
+            (
+              lpa_inv_no LIKE '%$txtSearch%'
+                OR
+              lpa_inv_client_name LIKE '%$txtSearch%' 
+            )
+            AND lpa_inv_status <> 'D'
          ORDER BY  lpa_inv_date DESC
 
          ";
@@ -67,7 +70,7 @@
           <tr class="hl">
             <td onclick="loadSalesItem(<?PHP echo $sid; ?>,'Edit')"
                 style="cursor: pointer;border-right: #cccccc solid 1px">
-                <?PHP echo $row['lpa_inv_date']; ?>
+                <?PHP echo date("d/m/Y H:i:s", strtotime($row['lpa_inv_date'])); ?>
             </td>
             <td onclick="loadSalesItem(<?PHP echo $sid; ?>,'Edit')"
                 style="cursor: pointer;border-right: #cccccc solid 1px">

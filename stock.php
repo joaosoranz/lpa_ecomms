@@ -50,9 +50,11 @@
          FROM
             lpa_stock
          WHERE
-            lpa_stock_ID LIKE '%$txtSearch%' AND lpa_stock_status <> 'D'
-         OR
-            lpa_stock_name LIKE '%$txtSearch%' AND lpa_stock_status <> 'D'
+            (
+              lpa_stock_ID LIKE '%$txtSearch%'
+                OR
+              lpa_stock_name LIKE '%$txtSearch%'
+            ) AND lpa_stock_status <> 'D'
 
          ";
       $result = $db->query($query);

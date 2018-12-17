@@ -26,15 +26,15 @@
       printf("Errormessage: %s\n", $db->error);
       exit;
     } else {
-      header("Location: sale.php?a=recDel&txtSearch=$txtSearch");
+      header("Location: sales.php?a=recDel&txtSearch=$txtSearch");
       exit;
     }
   }
 
   isset($_POST['txtInvNo'])? $SaleID = $_POST['txtInvNo'] : $SaleID = gen_ID();
-  isset($_POST['txtInvDate'])? $InvDate = date('Y-m-d h:i:s', $_POST['txtInvDate']) : $InvDate = "";
+  isset($_POST['txtInvDate'])? $InvDate = date('Y-m-d H:i:s', strtotime(str_replace('/', '-', $_POST['txtInvDate']))) : $InvDate = "";
   isset($_POST['txtInvClientID'])? $InvClientID = $_POST['txtInvClientID'] : $InvClientID = "";
-  isset($_POST['txtInvClientName'])? $InvClientName = $_POST['txtInvClientName'] : $InvClientName = "0";
+  isset($_POST['txtInvClientName'])? $InvClientName = $_POST['txtInvClientName'] : $InvClientName = "";
   isset($_POST['txtInvClientAddress'])? $InvClientAddress = $_POST['txtInvClientAddress'] : $InvClientAddress = "";
   isset($_POST['txtInvAmount'])? $InvAmount = $_POST['txtInvAmount'] : $InvAmount = "0.00";
   isset($_POST['txtStatus'])? $InvStatus = $_POST['txtStatus'] : $InvStatus = "";
@@ -42,7 +42,7 @@
   if($action == "updateRec") {
     $query =
       "UPDATE lpa_invoices SET
-         lpa_inv_date = $InvDate,
+         lpa_inv_date = '$InvDate',
          lpa_inv_client_ID = '$InvClientID',
          lpa_inv_client_name = '$InvClientName',
          lpa_inv_client_address = '$InvClientAddress',
@@ -66,8 +66,6 @@
 
   if($action == "insertRec") {
   
-    print $InvDate;
-  
     $query =
       "INSERT INTO lpa_invoices (
          lpa_inv_no,
@@ -87,13 +85,14 @@
          '$InvStatus'
        )
       ";
+
     openDB();
     $result = $db->query($query);
     if($db->error) {
       printf("Errormessage: %s\n", $db->error);
       exit;
     } else {
-      header("Location: sales.php?a=recInsert&txtSearch=".$SaleID);
+      header("Location: sales.php?a=recInsert");
       exit;
     }
   }
@@ -122,31 +121,31 @@
     <form name="frmSaleRec" id="frmSaleRec" method="post" action="<?PHP echo $_SERVER['PHP_SELF']; ?>">
       <div>
         <div style="width:130px; display: inline-block;">
-            Sale Number:<br/><input name="txtInvNo" id="txtInvNo" placeholder="Sale Number" value="<?PHP echo $SaleID; ?>" style="width: 100px;" title="Sale Number">
+            Sale Number:<br/><input name="txtInvNo" id="txtInvNo" value="<?PHP echo $SaleID; ?>" style="width: 100px;" readonly>
         </div>
         <div style="margin-top: <?PHP echo $fieldSpacer; ?>; display: inline-block;">
-            Sale Date:<br/><input name="txtInvDate" id="txtInvDate" placeholder="Sale Name" value="<?PHP echo $InvDate; ?>" style="width: 140px;"  title="Sale Date">
+            Sale Date:<br/><input name="txtInvDate" id="txtInvDate" value="<?PHP if (isset($InvDate) && $InvDate!="") echo date("d/m/Y H:i:s", strtotime($InvDate)); ?>" style="width: 140px;">
         </div>
       </div>
       <div>
         <div style="width:130px; margin-top: <?PHP echo $fieldSpacer; ?>; display: inline-block;">
-            Client Code:<br/><input name="txtInvClientID" id="txtInvClientID" placeholder="Client Code" value="<?PHP echo $InvClientID; ?>" style="width: 100px;"  title="Client Code">
+            Client Code:<br/><input name="txtInvClientID" id="txtInvClientID" value="<?PHP echo $InvClientID; ?>" style="width: 100px;" maxlength="8">
         </div>
         <div style="margin-top: <?PHP echo $fieldSpacer; ?>; width:260px; display: inline-block;">
-            Client Name:<br/><input name="txtInvClientName" id="txtInvClientName" placeholder="Client Name" value="<?PHP echo $InvClientName; ?>" style="width: 250px;"  title="Client Name">
+            Client Name:<br/><input name="txtInvClientName" id="txtInvClientName" value="<?PHP echo $InvClientName; ?>" style="width: 250px;" maxlength="30">
         </div>
       </div>      
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>;">
-        Client Address:<br/><input name="txtInvClientAddress" id="txtInvClientAddress" placeholder="Client Address" value="<?PHP echo $InvClientAddress; ?>" style="width: 385px;"  title="Client Address">
+        Client Address:<br/><input name="txtInvClientAddress" id="txtInvClientAddress" value="<?PHP echo $InvClientAddress; ?>" style="width: 385px;" maxlength="100">
       </div>
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>">
-        Sale Amount:<br/><input name="txtInvAmount" id="txtInvAmount" placeholder="Sale Amount" value="<?PHP echo $InvAmount; ?>" style="width: 90px;text-align: right"  title="Sale Amount">
+        Sale Amount:<br/><input name="txtInvAmount" id="txtInvAmount" value="<?PHP echo $InvAmount; ?>" style="width: 90px;text-align: right">
       </div>
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>;">
         <div>Sale Status:</div>
-        <input name="txtStatus" id="txtSaleStatusActive" type="radio" value="A">
+        <input name="txtStatus" id="txtSaleStatusActive" <?php if (isset($InvStatus) && ($InvStatus=="A" || $InvStatus=="")) echo "checked";?> type="radio" value="A">
           <label for="txtSaleStatusActive">Active</label>
-        <input name="txtStatus" id="txtSaleStatusInactive" type="radio" value="I">
+        <input name="txtStatus" id="txtSaleStatusInactive" <?php if (isset($InvStatus) && $InvStatus=="I") echo "checked";?> type="radio" value="I">
           <label for="txtSaleStatusInactive">Inactive</label>
       </div>
       <input name="a" id="a" value="<?PHP echo $mode; ?>" type="hidden">
@@ -162,21 +161,23 @@
     </div>
   </div>
   <script>
-    var InvRecStatus = "<?PHP echo $InvStatus; ?>";
-    if(InvRecStatus == "a") {
-      $('#txtSaleStatusActive').prop('checked', true);
-    } else {
-      $('#txtSaleStatusInactive').prop('checked', true);
-    }
+    $( function() {
+      $("#txtInvDate").mask('00/00/0000 00:00:00');
+      $("#txtInvAmount").mask('000000.00', {reverse: true});
+    } );
+
     $("#btnSaleSave").click(function(){
         $("#frmSaleRec").submit();
     });
+
     function delRec(ID) {
-      navMan("saleaddedit.php?sid=" + ID + "&a=delRec");
+      navMan("salesaddedit.php?sid=" + ID + "&a=delRec");
     }
+
     setTimeout(function(){
-      $("#txtInvClientName").focus();
+      $("#txtInvDate").focus();
     },1);
+
   </script>
 <?PHP
 build_footer();
