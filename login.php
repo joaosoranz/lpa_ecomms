@@ -15,7 +15,8 @@
       SELECT
         lpa_user_ID,
         lpa_user_username,
-        lpa_user_password
+        lpa_user_password,
+        lpa_user_group
       FROM
         lpa_users
       WHERE
@@ -29,6 +30,7 @@
     if($row['lpa_user_username'] == $uName) {
       if($row['lpa_user_password'] == $uPassword) {
         $_SESSION['authUser'] = $row['lpa_user_ID'];
+        $_SESSION['UserGroup'] = $row['lpa_user_group'];
         header("Location: index.php");
         exit;
       }

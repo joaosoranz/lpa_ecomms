@@ -144,10 +144,10 @@
       <input name="txtSearch" id="txtSearch" value="<?PHP echo $txtSearch; ?>" type="hidden">
     </form>
     <div class="optBar">
-      <button type="button" id="btnStockSave">Save</button>
+      <button type="button" id="btnStockSave" <?php if (isset($_SESSION['UserGroup']) && $_SESSION['UserGroup']=="standard") echo "disabled";?>>Save</button>
       <button type="button" onclick="navMan('stock.php')">Close</button>
       <?PHP if($action == "Edit") { ?>
-      <button type="button" onclick="delRec('<?PHP echo $sid; ?>')" style="color: darkred; margin-left: 20px">DELETE</button>
+      <button type="button" onclick="delRec('<?PHP echo $sid; ?>')" style="color: darkred; margin-left: 20px" <?php if (isset($_SESSION['UserGroup']) && $_SESSION['UserGroup']=="standard") echo "disabled";?>>DELETE</button>
       <?PHP } ?>
     </div>
   </div>

@@ -25,7 +25,7 @@
           <input name="txtSearch" id="txtSearch" placeholder="Search Stock"
           style="width: calc(100% - 115px)" value="<?PHP echo $txtSearch; ?>">
           <button type="button" id="btnSearch">Search</button>
-          <button type="button" id="btnAddRec">Add</button>
+          <button type="button" id="btnAddRec" <?php if (isset($_SESSION['UserGroup']) && $_SESSION['UserGroup']=="standard") echo "disabled";?>>Add</button>
         </div>
       </div>
       <input type="hidden" name="a" value="listStock">
