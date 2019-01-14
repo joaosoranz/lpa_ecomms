@@ -1,5 +1,7 @@
 <?PHP 
   require('app-lib.php');
+  require('error.php');
+  
   build_header();
 ?>
   <?PHP build_navBlock(); ?>

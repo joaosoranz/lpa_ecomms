@@ -1,6 +1,7 @@
 <?PHP
   $authChk = true;
   require('app-lib.php');
+  require('error.php');
 
   isset($_POST['a'])? $action = $_POST['a'] : $action = "";
   if(!$action) {

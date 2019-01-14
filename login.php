@@ -1,5 +1,6 @@
 <?PHP 
   require('app-lib.php');
+  require('error.php');
   isset($_POST['a'])? $action = $_POST['a'] : $action = "";
   $msg = null;
   if($action == "doLogin") {

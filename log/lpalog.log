@@ -24,3 +24,14 @@
 2019/01/14 10:49:31 -- Page access: Sales User:admin
 2019/01/14 10:49:31 -- Page access: Stock User:admin
 2019/01/14 10:49:32 -- Logout Successful! User:admin
+2019/01/14 12:15:22 -- error1
+2019/01/14 12:16:10 -- error1
+2019/01/14 12:18:59 -- Uncaught exception: Call to a member function fetch_assoc() on boolean
+2019/01/14 12:20:20 -- Uncaught exception: Call to a member function fetch_assoc() on boolean
+2019/01/14 12:24:13 -- Exception!!! Class: Error Message:Call to a member function fetch_assoc() on boolean Stack trace:#0 {main} File:C:\wamp64\www\lpa_ecomms\login.php
+2019/01/14 12:25:31 -- Exception!!! Class: [Error] Message: [Call to a member function fetch_assoc() on boolean] Stack trace: [#0 {main}] File: [C:\wamp64\www\lpa_ecomms\login.php]
+2019/01/14 12:27:14 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean] Stack trace: [#0 {main}] File: [C:\wamp64\www\lpa_ecomms\login.php] Line: [30]
+2019/01/14 12:28:05 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [30].
+2019/01/14 12:28:21 -- Login Successful! User:admin
+2019/01/14 12:28:23 -- Page access: Stock User:admin
+2019/01/14 12:28:23 -- Page access: Sales User:admin

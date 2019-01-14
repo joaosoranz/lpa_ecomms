@@ -1,6 +1,8 @@
 <?PHP
   $authChk = true;
   require('app-lib.php');
+  require('error.php');
+  
   isset($_REQUEST['sid'])? $sid = $_REQUEST['sid'] : $sid = "";
   if(!$sid) {
     isset($_POST['sid'])? $sid = $_POST['sid'] : $sid = "";
