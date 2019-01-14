@@ -83,6 +83,9 @@ function closeDB() {
  *  - Check if the logout button has been clicked, if so kill session.
  */
 if(isset($_REQUEST['killses']) == "true") {
+
+  writeLog("Logout Successful! User:".$_SESSION['UserName']);
+
   $_SESSION = array();
   if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
@@ -91,6 +94,7 @@ if(isset($_REQUEST['killses']) == "true") {
       $params["secure"], $params["httponly"]
     );
   }
+  
   session_destroy();
   header("location: login.php");
 }
@@ -157,5 +161,18 @@ function build_footer() {
   include 'footer.php';
 }
 
+/**
+ *  Write the message in the log file
+ */
+function writeLog($logMessage='') {
+
+  if (!file_exists("log/lpalog.log")){
+    fopen("log/lpalog.log", "w");
+  }
+
+  $date = date('Y/m/d H:i:s');
+
+  error_log($date." -- ".$logMessage."\r\n", 3, "log/lpalog.log");
+}
 
 ?>

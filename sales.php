@@ -1,6 +1,7 @@
 <?PHP
   $authChk = true;
   require('app-lib.php');
+
   isset($_POST['a'])? $action = $_POST['a'] : $action = "";
   if(!$action) {
     isset($_REQUEST['a'])? $action = $_REQUEST['a'] : $action = "";
@@ -9,6 +10,11 @@
   if(!$txtSearch) {
     isset($_REQUEST['txtSearch'])? $txtSearch = $_REQUEST['txtSearch'] : $txtSearch = "";
   }
+
+  if($action=="") {
+    writeLog("Page access: Sales User:".$_SESSION['UserName']);
+  }
+
   build_header($displayName);
 ?>
 

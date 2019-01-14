@@ -30,13 +30,20 @@
     if($row['lpa_user_username'] == $uName) {
       if($row['lpa_user_password'] == $uPassword) {
         $_SESSION['authUser'] = $row['lpa_user_ID'];
+        $_SESSION['UserName'] = $uName;
         $_SESSION['UserGroup'] = $row['lpa_user_group'];
+
+        writeLog("Login Successful! User:".$uName);
+
         header("Location: index.php");
         exit;
       }
     }
 
     if($chkLogin == false) {
+      
+      writeLog("Login failed!");
+      
       $msg = "Login failed! Please try again.";
     }
 
