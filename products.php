@@ -21,7 +21,7 @@
 
   </form>
 
-<?PHP
+  <?PHP
     if($action == "search") {
       isset($_POST['txtSearch'])? $itmSearch = $_POST['txtSearch'] : $itmSearch = "";
       $itemNum = 1;
@@ -71,8 +71,7 @@
         </div>
       <?PHP } ?>
       </div>
-    <?PHP;
-    } ?>
+    <?PHP } ?>
   <script>
     function loadURL(URL) {
       window.location = URL;

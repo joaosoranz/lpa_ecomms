@@ -135,6 +135,7 @@
       $("#txtSearch").select().focus();
     },1);
   </script>
+  
 <?PHP
 build_footer();
 ?>
