@@ -25,7 +25,7 @@
         </tr>
 
         <?php
-            if(!isset($_COOKIE[$cookie_name])) { ?>
+            if(!isset($_COOKIE[$cookie_name]) || $_COOKIE[$cookie_name] == "") { ?>
             <tr>
                 <td colspan="7" style="text-align: center">
                     No items Found!!

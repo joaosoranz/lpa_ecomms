@@ -42,7 +42,10 @@ function deleteFromCartCore(ID) {
     {
       //alert(itemId);
     } else {
-      cookieValue = itemId + ":" + itemQty + "," + cookieValue; 
+      if(cookieValue!= "")
+        cookieValue = itemId + ":" + itemQty + "," + cookieValue;
+      else
+      cookieValue = itemId + ":" + itemQty;
     }
   }
 
