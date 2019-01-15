@@ -43,3 +43,21 @@
 2019/01/15 09:51:30 -- Exception!!! Message: [].
 2019/01/15 09:51:46 -- Page access: Stock User:admin
 2019/01/15 09:51:47 -- Exception!!! Message: [].
+2019/01/15 10:24:38 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(7): globalErrorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\l...', 7, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:25:06 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(22): globalErrorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\l...', 22, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:38:45 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(38): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 38, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:40:33 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(2, 'Use of undefine...', 'C:\\wamp64\\www\\l...', 40, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:41:11 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:41:13 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:41:14 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 10:41:14 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 11:01:16 -- Page access: Stock User:admin
+2019/01/15 11:45:02 -- Page access: Stock User:admin

@@ -5,19 +5,65 @@ function navMan(URL) {
     window.location = URL;
 }
 
+function addToCartCore(ID) {
+  var qty = document.getElementById("fldQTY-"+ID).value;
+
+  var cookieValue = ID + ":" + qty;
+
+  var x = getCookie('cartItems');
+  if (x) {
+    cookieValue = x + "," + cookieValue;
+  }
+
+  setCookie("cartItems", cookieValue, 1);
+}
+
 function addToCart(ID) {
-    var qty = document.getElementById("fldQTY-"+ID).value;
+    addToCartCore(ID);
 
-    var cookieValue = ID + ":" + qty;
+    alert("Item added to your cart!!");
+}
 
-    var x = getCookie('cartItems');
-    if (x) {
-      cookieValue = x + "," + cookieValue;
+function deleteFromCartCore(ID) {
+  var cart = getCookie('cartItems');
+  var cookieValue = ""; 
+  
+  if (cart) {
+    items = cart.split(",");
+  }
+
+  for(i = 0; i < items.length; i++){    
+    item = items[i].split(":");
+
+    itemId = item[0];
+    itemQty = item[1];
+
+    if(itemId == ID)
+    {
+      //alert(itemId);
+    } else {
+      cookieValue = itemId + ":" + itemQty + "," + cookieValue; 
     }
+  }
 
-    setCookie("cartItems", cookieValue, 1);
+  setCookie("cartItems", cookieValue, 1);
+}
 
-    alert(qty + " x Item: " + ID + " has been added to your cart");
+function deleteFromCart(ID) {
+  deleteFromCartCore(ID);
+
+  alert("Item removed from your cart!!");
+
+  window.location = "checkout.php";
+}
+
+function updateQTYCart(ID){
+  deleteFromCartCore(ID);
+  addToCartCore(ID);
+
+  alert("Item updated from your cart!!");
+
+  window.location = "checkout.php";
 }
 
 function setCookie(name,value,days) {
