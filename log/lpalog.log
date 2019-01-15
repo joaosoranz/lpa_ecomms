@@ -1,188 +1,45 @@
-2019/01/14 10:39:34 -- Page access: Stock User:admin
-2019/01/14 10:39:49 -- Page access: Stock User:admin
-2019/01/14 10:39:58 -- Page access: Stock User:admin
-2019/01/14 10:41:04 -- Page access: Sales User:admin
-2019/01/14 10:43:01 -- Page access: Stock User:admin
-2019/01/14 10:43:06 -- Page access: Stock User:admin
-2019/01/14 10:43:06 -- Page access: Sales User:admin
-2019/01/14 10:43:08 -- Page access: Stock User:admin
-2019/01/14 10:43:09 -- Page access: Sales User:admin
-2019/01/14 10:43:16 -- Login Successful! User:admin
-2019/01/14 10:46:41 -- Page access: Stock User:admin
-2019/01/14 10:46:42 -- Page access: Stock User:admin
-2019/01/14 10:46:43 -- User: logout
-2019/01/14 10:47:25 -- Login Successful! User:admin
-2019/01/14 10:47:27 -- Page access: Stock User:admin
-2019/01/14 10:47:27 -- Page access: Sales User:admin
-2019/01/14 10:47:28 -- Page access: Stock User:admin
-2019/01/14 10:47:28 -- Page access: Sales User:admin
-2019/01/14 10:47:29 -- User:admin logout
-2019/01/14 10:49:25 -- Login Successful! User:admin
-2019/01/14 10:49:27 -- Logout Successful! User:admin
-2019/01/14 10:49:29 -- Login Successful! User:admin
-2019/01/14 10:49:30 -- Page access: Stock User:admin
-2019/01/14 10:49:31 -- Page access: Sales User:admin
-2019/01/14 10:49:31 -- Page access: Stock User:admin
-2019/01/14 10:49:32 -- Logout Successful! User:admin
-2019/01/14 12:15:22 -- error1
-2019/01/14 12:16:10 -- error1
-2019/01/14 12:18:59 -- Uncaught exception: Call to a member function fetch_assoc() on boolean
-2019/01/14 12:20:20 -- Uncaught exception: Call to a member function fetch_assoc() on boolean
-2019/01/14 12:24:13 -- Exception!!! Class: Error Message:Call to a member function fetch_assoc() on boolean Stack trace:#0 {main} File:C:\wamp64\www\lpa_ecomms\login.php
-2019/01/14 12:25:31 -- Exception!!! Class: [Error] Message: [Call to a member function fetch_assoc() on boolean] Stack trace: [#0 {main}] File: [C:\wamp64\www\lpa_ecomms\login.php]
-2019/01/14 12:27:14 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean] Stack trace: [#0 {main}] File: [C:\wamp64\www\lpa_ecomms\login.php] Line: [30]
-2019/01/14 12:28:05 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [30].
-2019/01/14 12:28:21 -- Login Successful! User:admin
-2019/01/14 12:28:23 -- Page access: Stock User:admin
-2019/01/14 12:28:23 -- Page access: Sales User:admin
-2019/01/14 12:36:17 -- Page access: Sales User:admin
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:35 -- error2
-2019/01/14 12:38:56 -- Page access: Stock User:admin
-2019/01/14 12:39:07 -- Page access: Stock User:admin
-2019/01/14 12:39:08 -- Page access: Sales User:admin
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 12:39:10 -- error2
-2019/01/14 13:18:00 -- error2
-2019/01/14 13:18:00 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:18:05 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:26:02 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:26 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:28:31 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:11 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:26 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:50 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:35:51 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:00 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:01 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:02 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:38:18 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:41:49 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:45:58 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:16 -- error2
-2019/01/14 13:49:17 -- Page access: Stock User:admin
+2019/01/15 09:26:30 -- Login Successful! User:username
+2019/01/15 09:26:35 -- Page access: Sales User:username
+2019/01/15 09:26:36 -- Page access: Stock User:username
+2019/01/15 09:26:37 -- Page access: Sales User:username
+2019/01/15 09:27:15 -- error2
+2019/01/15 09:27:15 -- Exception!!! Message: [8]. Stack trace: [Undefined index: lpa_image]. File: [errfile]. Line: [errline].
+2019/01/15 09:27:15 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\products.php(36): globalErrorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\l...', 36, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [19].
+2019/01/15 09:28:35 -- Page access: Stock User:username
+2019/01/15 09:28:42 -- Page access: Sales User:username
+2019/01/15 09:28:45 -- Page access: Stock User:username
+2019/01/15 09:28:53 -- Page access: Stock User:username
+2019/01/15 09:28:55 -- Page access: Sales User:username
+2019/01/15 09:29:03 -- error2
+2019/01/15 09:29:03 -- Exception!!! Message: [8]. Stack trace: [Undefined index: lpa_image]. File: [errfile]. Line: [errline].
+2019/01/15 09:29:03 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\products.php(36): globalErrorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\l...', 36, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [19].
+2019/01/15 09:30:02 -- Page access: Sales User:username
+2019/01/15 09:30:02 -- Page access: Stock User:username
+2019/01/15 09:30:03 -- Page access: Stock User:username
+2019/01/15 09:30:03 -- Page access: Sales User:username
+2019/01/15 09:35:04 -- Logout Successful! User:username
+2019/01/15 09:42:56 -- Login Successful! User:admin
+2019/01/15 09:43:03 -- Page access: Stock User:admin
+2019/01/15 09:43:17 -- Page access: Stock User:admin
+2019/01/15 09:43:17 -- Page access: Stock User:admin
+2019/01/15 09:43:17 -- Page access: Stock User:admin
+2019/01/15 09:43:17 -- Page access: Stock User:admin
+2019/01/15 09:43:18 -- Page access: Stock User:admin
+2019/01/15 09:43:45 -- Page access: Stock User:admin
+2019/01/15 09:43:46 -- Page access: Stock User:admin
+2019/01/15 09:43:47 -- Page access: Stock User:admin
+2019/01/15 09:44:05 -- Page access: Stock User:admin
+2019/01/15 09:44:06 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\stock.php(68): globalErrorHandler(8, 'Trying to get p...', 'C:\\wamp64\\www\\l...', 68, Array)
+#1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
+2019/01/15 09:47:11 -- Page access: Stock User:admin
+2019/01/15 09:47:12 -- Page access: Stock User:admin
+2019/01/15 09:47:13 -- Exception!!! Message: [8].
+2019/01/15 09:50:40 -- Exception!!! Message: [68].
+2019/01/15 09:50:43 -- Exception!!! Message: [68].
+2019/01/15 09:51:26 -- Page access: Stock User:admin
+2019/01/15 09:51:28 -- Page access: Stock User:admin
+2019/01/15 09:51:30 -- Exception!!! Message: [].
+2019/01/15 09:51:46 -- Page access: Stock User:admin
+2019/01/15 09:51:47 -- Exception!!! Message: [].

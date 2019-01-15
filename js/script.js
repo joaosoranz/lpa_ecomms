@@ -45,6 +45,10 @@ function do_login() {
   document.getElementById("frmLogin").submit();
 }
 
+function loadURL(URL) {
+  window.location = URL;
+}
+
 jQuery.fn.center = function (container) {
 this.css("position","absolute");
 if(container) {

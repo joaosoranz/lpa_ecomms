@@ -62,6 +62,7 @@
         <input type="password" name="fldPassword" id="fldPassword">
         <div class="buttonBar">
           <button type="button" onclick="do_login()">Login</button>
+          <button type="button" onclick="loadURL('signUp.php')">Sign Up</button>
         </div>
       </div>
       <input type="hidden" name="a" value="doLogin">

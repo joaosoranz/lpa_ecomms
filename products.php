@@ -33,8 +33,8 @@
       $result = $db->query($query);
 
       while ($row = $result->fetch_assoc()) {
-        if ($row['lpa_image']) {
-          $prodImage = $row['lpa_image'];
+        if ($row['lpa_stock_image']) {
+          $prodImage = $row['lpa_stock_image'];
         } else {
           $prodImage = "question.png";
         }
@@ -72,11 +72,6 @@
       <?PHP } ?>
       </div>
     <?PHP } ?>
-  <script>
-    function loadURL(URL) {
-      window.location = URL;
-    }
-  </script>
 
 <?PHP
   build_footer();
