@@ -153,3 +153,10 @@ INSERT INTO `lpa_users` (`lpa_user_ID`, `lpa_user_username`, `lpa_user_password`
 alter table lpa_users add COLUMN lpa_phone varchar (10)
 
 alter table lpa_users add COLUMN lpa_address varchar (250)
+
+alter table lpa_invoices add COLUMN lpa_inv_phone varchar (10)
+
+alter table lpa_invoices add COLUMN lpa_inv_payment varchar (15)
+
+ALTER TABLE `lpa_invoices` CHANGE `lpa_inv_client_ID` `lpa_inv_client_ID` VARCHAR(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+

@@ -17,6 +17,8 @@
     isset($_POST['passWord'])? $passWord = $_POST['passWord'] : $passWord = "";
     isset($_POST['confirmPassword'])? $confirmPassword = $_POST['confirmPassword'] : $confirmPassword = "";
 
+    $password_hash = crypt($passWord);
+
     $query =
       "INSERT INTO lpa_users (
          lpa_user_username,
@@ -29,7 +31,7 @@
          lpa_address
        ) VALUES (
          '$userName',
-         '$passWord',
+         '$password_hash',
          '$firstName',
          '$lastName',
          'standard',

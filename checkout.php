@@ -81,7 +81,7 @@
                 <tr>
                 <tr>
                     <td colspan="7" style="border: #cccccc solid 1px; text-align:right;">
-                        <button type="button" onclick="addToCart('<?PHP echo $prodID; ?>')">Confirm</button>
+                        <button type="button" onclick="loadURL('payment.php')">Confirm</button>
                     </td>
                 <tr/>
             <?php

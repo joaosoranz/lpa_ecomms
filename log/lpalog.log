@@ -53,7 +53,7 @@
 #1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
 2019/01/15 10:41:11 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
 #1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
-2019/01/15 10:41:13 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
+2019/01/15 10:41:13 -- Exception!!! Message: [Can only throw objects]. Stack trddddace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
 #1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
 2019/01/15 10:41:14 -- Exception!!! Message: [Can only throw objects]. Stack trace: [#0 C:\wamp64\www\lpa_ecomms\checkout.php(40): globalErrorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\l...', 40, Array)
 #1 {main}]. File: [C:\wamp64\www\lpa_ecomms\error.php]. Line: [13].
@@ -70,3 +70,26 @@
 2019/01/15 13:49:18 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\payment.php]. Line: [13].
 2019/01/15 13:49:19 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\payment.php]. Line: [13].
 2019/01/15 13:49:19 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\payment.php]. Line: [13].
+2019/01/22 08:48:59 -- Login Successful! User:admin
+2019/01/22 09:43:20 -- Login Successful! User:admin
+2019/01/22 09:44:25 -- Login Successful! User:admin
+2019/01/22 09:45:24 -- Login Successful! User:admin
+2019/01/22 10:01:18 -- Login Successful! User:admin
+2019/01/22 10:04:49 -- Exception!!! Message: [Call to a member function query() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\payment.php]. Line: [68].
+2019/01/22 10:06:57 -- Exception!!! Message: [Call to a member function fetch_assoc() on boolean]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\payment.php]. Line: [71].
+2019/01/22 10:44:51 -- Page access: Sales User:admin
+2019/01/22 10:45:24 -- Page access: Sales User:admin
+2019/01/22 10:50:33 -- Page access: Stock User:admin
+2019/01/22 10:55:47 -- Page access: Sales User:admin
+2019/01/22 10:57:45 -- Page access: Sales User:admin
+2019/01/22 10:57:46 -- Page access: Stock User:admin
+2019/01/22 10:57:47 -- Page access: Sales User:admin
+2019/01/22 10:57:47 -- Page access: Sales User:admin
+2019/01/22 11:05:51 -- Page access: Sales User:admin
+2019/01/22 11:06:20 -- Page access: Sales User:admin
+2019/01/22 11:07:53 -- Page access: Sales User:admin
+2019/01/22 11:17:53 -- Page access: Sales User:admin
+2019/01/22 11:25:16 -- Logout Successful! User:admin
+2019/01/22 11:26:22 -- Login failed!
+2019/01/22 11:28:32 -- Login failed!
+2019/01/22 11:28:40 -- Login Successful! User:jones

@@ -22,14 +22,13 @@
         lpa_users
       WHERE
         lpa_user_username = '$uName'
-      AND
-        lpa_user_password = '$uPassword'
       LIMIT 1
       ";
     $result = $db->query($query);
     $row = $result->fetch_assoc();
     if($row['lpa_user_username'] == $uName) {
-      if($row['lpa_user_password'] == $uPassword) {
+      if(crypt($uPassword, $row['lpa_user_password']) == $row['lpa_user_password']) {
+      //if($row['lpa_user_password'] == $uPassword) {
         $_SESSION['authUser'] = $row['lpa_user_ID'];
         $_SESSION['UserName'] = $uName;
         $_SESSION['UserGroup'] = $row['lpa_user_group'];
