@@ -1,6 +1,8 @@
 <?PHP
   $authChk = true;
   require('app-lib.php');
+  require('error.php');
+  
   isset($_REQUEST['sid'])? $sid = $_REQUEST['sid'] : $sid = "";
   if(!$sid) {
     isset($_POST['sid'])? $sid = $_POST['sid'] : $sid = "";
@@ -88,7 +90,7 @@
       printf("Errormessage: %s\n", $db->error);
       exit;
     } else {
-      header("Location: stock.php?a=recInsert&txtSearch=".$stockID);
+      header("Location: stock.php?a=recInsert");
       exit;
     }
   }
@@ -116,25 +118,27 @@
     <div class="PageTitle">Stock Record Management (<?PHP echo $action; ?>)</div>
     <form name="frmStockRec" id="frmStockRec" method="post" action="<?PHP echo $_SERVER['PHP_SELF']; ?>">
       <div>
-        <input name="txtStockID" id="txtStockID" placeholder="Stock ID" value="<?PHP echo $stockID; ?>" style="width: 100px;" title="Stock ID">
+        Stock ID:<br/><input name="txtStockID" id="txtStockID" value="<?PHP echo $stockID; ?>" style="width: 100px;" readonly>
       </div>
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>">
-        <input name="txtStockName" id="txtStockName" placeholder="Stock Name" value="<?PHP echo $stockName; ?>" style="width: 400px;"  title="Stock Name">
+        Stock Name:<br /><input name="txtStockName" id="txtStockName" value="<?PHP echo $stockName; ?>" style="width: 400px;" maxlength="100">
       </div>
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>">
-        <textarea name="txtStockDesc" id="txtStockDesc" placeholder="Stock Description" style="width: 400px;height: 80px"  title="Stock Description"><?PHP echo $stockDesc; ?></textarea>
+        Stock Description:<br/><textarea name="txtStockDesc" id="txtStockDesc" style="width: 400px;height: 80px"><?PHP echo $stockDesc; ?></textarea>
       </div>
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>">
-        <input name="txtStockOnHand" id="txtStockOnHand" placeholder="Stock On-Hand" value="<?PHP echo $stockOnHand; ?>" style="width: 90px;text-align: right"  title="Stock On-Hand">
-      </div>
-      <div style="margin-top: <?PHP echo $fieldSpacer; ?>">
-        <input name="txtStockPrice" id="txtStockPrice" placeholder="Stock Price" value="<?PHP echo $stockPrice; ?>" style="width: 90px;text-align: right"  title="Stock Price">
+        <div style="width:130px; display: inline-block;">
+          Stock On-Hand:<br/><input name="txtStockOnHand" id="txtStockOnHand" value="<?PHP echo $stockOnHand; ?>" style="width: 90px;text-align: right">
+        </div>
+        <div style="width:130px; display: inline-block;">
+          Stock Price:<br/><input name="txtStockPrice" id="txtStockPrice" value="<?PHP echo $stockPrice; ?>" style="width: 90px;text-align: right">
+        </div>
       </div>
       <div style="margin-top: <?PHP echo $fieldSpacer; ?>">
         <div>Stock Status:</div>
-        <input name="txtStatus" id="txtStockStatusActive" type="radio" value="a">
+        <input name="txtStatus" id="txtStockStatusActive" <?php if (isset($stockStatus) && ($stockStatus=="A" || $stockStatus=="")) echo "checked";?> type="radio" value="A">
           <label for="txtStockStatusActive">Active</label>
-        <input name="txtStatus" id="txtStockStatusInactive" type="radio" value="i">
+        <input name="txtStatus" id="txtStockStatusInactive" <?php if (isset($stockStatus) && $stockStatus=="I") echo "checked";?> type="radio" value="I">
           <label for="txtStockStatusInactive">Inactive</label>
       </div>
       <input name="a" id="a" value="<?PHP echo $mode; ?>" type="hidden">
@@ -142,26 +146,28 @@
       <input name="txtSearch" id="txtSearch" value="<?PHP echo $txtSearch; ?>" type="hidden">
     </form>
     <div class="optBar">
-      <button type="button" id="btnStockSave">Save</button>
+      <button type="button" id="btnStockSave" <?php if (isset($_SESSION['UserGroup']) && $_SESSION['UserGroup']=="standard") echo "disabled";?>>Save</button>
       <button type="button" onclick="navMan('stock.php')">Close</button>
       <?PHP if($action == "Edit") { ?>
-      <button type="button" onclick="delRec('<?PHP echo $sid; ?>')" style="color: darkred; margin-left: 20px">DELETE</button>
+      <button type="button" onclick="delRec('<?PHP echo $sid; ?>')" style="color: darkred; margin-left: 20px" <?php if (isset($_SESSION['UserGroup']) && $_SESSION['UserGroup']=="standard") echo "disabled";?>>DELETE</button>
       <?PHP } ?>
     </div>
   </div>
   <script>
-    var stockRecStatus = "<?PHP echo $stockStatus; ?>";
-    if(stockRecStatus == "a") {
-      $('#txtStockStatusActive').prop('checked', true);
-    } else {
-      $('#txtStockStatusInactive').prop('checked', true);
-    }
+
+    $( function() {
+      $("#txtStockOnHand").mask('00000', {reverse: true});
+      $("#txtStockPrice").mask('00000.00', {reverse: true});
+    } );
+
     $("#btnStockSave").click(function(){
         $("#frmStockRec").submit();
     });
+
     function delRec(ID) {
       navMan("stockaddedit.php?sid=" + ID + "&a=delRec");
     }
+
     setTimeout(function(){
       $("#txtStockName").focus();
     },1);

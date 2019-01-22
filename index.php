@@ -1,7 +1,10 @@
 <?PHP
 
   $authChk = true;
+
   require('app-lib.php');
+  require('error.php');
+  
   build_header($displayName);
 ?>
   <?PHP build_navBlock(); ?>

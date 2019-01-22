@@ -1,5 +1,6 @@
 <?PHP 
   require('app-lib.php');
+  require('error.php');
   isset($_POST['a'])? $action = $_POST['a'] : $action = "";
   $msg = null;
   if($action == "doLogin") {
@@ -15,26 +16,34 @@
       SELECT
         lpa_user_ID,
         lpa_user_username,
-        lpa_user_password
+        lpa_user_password,
+        lpa_user_group
       FROM
         lpa_users
       WHERE
         lpa_user_username = '$uName'
-      AND
-        lpa_user_password = '$uPassword'
       LIMIT 1
       ";
     $result = $db->query($query);
     $row = $result->fetch_assoc();
     if($row['lpa_user_username'] == $uName) {
-      if($row['lpa_user_password'] == $uPassword) {
+      if(crypt($uPassword, $row['lpa_user_password']) == $row['lpa_user_password']) {
+      //if($row['lpa_user_password'] == $uPassword) {
         $_SESSION['authUser'] = $row['lpa_user_ID'];
-        header("Location: /");
+        $_SESSION['UserName'] = $uName;
+        $_SESSION['UserGroup'] = $row['lpa_user_group'];
+
+        writeLog("Login Successful! User:".$uName);
+
+        header("Location: index.php");
         exit;
       }
     }
 
     if($chkLogin == false) {
+      
+      writeLog("Login failed!");
+      
       $msg = "Login failed! Please try again.";
     }
 
@@ -52,6 +61,7 @@
         <input type="password" name="fldPassword" id="fldPassword">
         <div class="buttonBar">
           <button type="button" onclick="do_login()">Login</button>
+          <button type="button" onclick="loadURL('signUp.php')">Sign Up</button>
         </div>
       </div>
       <input type="hidden" name="a" value="doLogin">

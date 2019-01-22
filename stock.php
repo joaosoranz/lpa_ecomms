@@ -1,6 +1,8 @@
 <?PHP
   $authChk = true;
   require('app-lib.php');
+  require('error.php');
+
   isset($_POST['a'])? $action = $_POST['a'] : $action = "";
   if(!$action) {
     isset($_REQUEST['a'])? $action = $_REQUEST['a'] : $action = "";
@@ -9,6 +11,11 @@
   if(!$txtSearch) {
     isset($_REQUEST['txtSearch'])? $txtSearch = $_REQUEST['txtSearch'] : $txtSearch = "";
   }
+
+  if($action=="") {
+    writeLog("Page access: Stock User:".$_SESSION['UserName']);
+  }
+
   build_header($displayName);
 ?>
   <?PHP build_navBlock(); ?>
@@ -25,7 +32,7 @@
           <input name="txtSearch" id="txtSearch" placeholder="Search Stock"
           style="width: calc(100% - 115px)" value="<?PHP echo $txtSearch; ?>">
           <button type="button" id="btnSearch">Search</button>
-          <button type="button" id="btnAddRec">Add</button>
+          <button type="button" id="btnAddRec" <?php if (isset($_SESSION['UserGroup']) && $_SESSION['UserGroup']=="standard") echo "disabled";?>>Add</button>
         </div>
       </div>
       <input type="hidden" name="a" value="listStock">
@@ -50,9 +57,11 @@
          FROM
             lpa_stock
          WHERE
-            lpa_stock_ID LIKE '%$txtSearch%' AND lpa_stock_status <> 'D'
-         OR
-            lpa_stock_name LIKE '%$txtSearch%' AND lpa_stock_status <> 'D'
+            (
+              lpa_stock_ID LIKE '%$txtSearch%'
+                OR
+              lpa_stock_name LIKE '%$txtSearch%'
+            ) AND lpa_stock_status <> 'D'
 
          ";
       $result = $db->query($query);

@@ -1,5 +1,7 @@
 <?PHP 
   require('app-lib.php'); 
+  require('error.php');
+  
   build_header();
   isset($_POST['a'])? $action = $_POST['a'] : $action = "";
 ?>
@@ -19,7 +21,7 @@
 
   </form>
 
-<?PHP
+  <?PHP
     if($action == "search") {
       isset($_POST['txtSearch'])? $itmSearch = $_POST['txtSearch'] : $itmSearch = "";
       $itemNum = 1;
@@ -31,8 +33,8 @@
       $result = $db->query($query);
 
       while ($row = $result->fetch_assoc()) {
-        if ($row['lpa_image']) {
-          $prodImage = $row['lpa_image'];
+        if ($row['lpa_stock_image']) {
+          $prodImage = $row['lpa_stock_image'];
         } else {
           $prodImage = "question.png";
         }
@@ -69,13 +71,7 @@
         </div>
       <?PHP } ?>
       </div>
-    <?PHP;
-    } ?>
-  <script>
-    function loadURL(URL) {
-      window.location = URL;
-    }
-  </script>
+    <?PHP } ?>
 
 <?PHP
   build_footer();

@@ -1,0 +1,49 @@
+[33mcommit 508a8b0e7d021a2cf04bd208e6d380d8b0e68888[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment[m[33m, [m[1;31morigin/development[m[33m)[m
+Author: João Soranz <joaosoranz@yahoo.com.br>
+Date:   Mon Jan 14 13:51:32 2019 +1000
+
+    adding products to a cookie when the add cart button is pressed
+
+[33mcommit 51702faf8ac3da8583150d06bd5773b3b0a9036b[m
+Author: João Soranz <joaosoranz@yahoo.com.br>
+Date:   Mon Jan 14 12:32:37 2019 +1000
+
+    adding log for exceptions
+
+[33mcommit 7cc1a0c29c6fb136c8e92b5dfa0ee160a2832b5b[m
+Author: João Soranz <joaosoranz@yahoo.com.br>
+Date:   Mon Jan 14 10:53:26 2019 +1000
+
+    adding log on login, logout and pages access
+
+[33mcommit 697165a5ce5f9e0860e8f3f2cff25c9b3bbddcc7[m
+Author: João Soranz <joaosoranz@yahoo.com.br>
+Date:   Tue Dec 18 12:31:52 2018 +1000
+
+    implementing permissions
+
+[33mcommit 9cf4246711377b5ad7908bf27ff21973e973638d[m
+Author: João Soranz <joaosoranz@yahoo.com.br>
+Date:   Mon Dec 17 12:20:56 2018 +1000
+
+    implementing mask, finishing sales and refactoring stock
+
+[33mcommit 2106ab3c2f40ea2f381b1dd0add4b434158ae6d7[m
+Author: João Soranz <joaosoranz@yahoo.com.br>
+Date:   Wed Dec 12 16:34:15 2018 +1000
+
+    ajustes de erros e sales page
+
+[33mcommit 43aa25d728e7653059032e25dbc8e69942d07a32[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: joaosoranz <joaosoranz@yahoo.com.br>
+Date:   Tue Dec 11 11:56:51 2018 +1000
+
+    Add files via upload
+    
+    creating rep
+
+[33mcommit dbd017ee7bd05b206039046c122102a2ddac9643[m
+Author: joaosoranz <joaosoranz@yahoo.com.br>
+Date:   Tue Dec 11 11:35:00 2018 +1000
+
+    Initial commit

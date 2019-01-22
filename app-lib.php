@@ -83,6 +83,9 @@ function closeDB() {
  *  - Check if the logout button has been clicked, if so kill session.
  */
 if(isset($_REQUEST['killses']) == "true") {
+
+  writeLog("Logout Successful! User:".$_SESSION['UserName']);
+
   $_SESSION = array();
   if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
@@ -91,6 +94,7 @@ if(isset($_REQUEST['killses']) == "true") {
       $params["secure"], $params["httponly"]
     );
   }
+  
   session_destroy();
   header("location: login.php");
 }
@@ -117,6 +121,8 @@ function build_navBlock() { ?>
       <div class="navItem" onclick="navMan('index.php')">HOME</div>
       <div class="navItem" onclick="navMan('stock.php')">STOCK</div>
       <div class="navItem" onclick="navMan('sales.php')">SALES</div>
+      <div class="navItem" onclick="navMan('products.php')">PRODUCTS</div>
+      <div class="navItem" onclick="navMan('checkout.php')">CHECKOUT</div>
       <div class="menuSep"></div>
       <div class="navItem" onclick="navMan('login.php?killses=true')">Logout</div>
     </div>
@@ -132,7 +138,7 @@ function build_navBlock() { ?>
  * @param int $strength
  * @return string
  */
-function gen_ID($prefix='',$length=10, $strength=0) {
+function gen_ID($prefix='',$length=5, $strength=0) {
   $final_id='';
   for($i=0;$i< $length;$i++)
   {
@@ -157,5 +163,18 @@ function build_footer() {
   include 'footer.php';
 }
 
+/**
+ *  Write the message in the log file
+ */
+function writeLog($logMessage='') {
+
+  if (!file_exists("log/lpalog.log")){
+    fopen("log/lpalog.log", "w");
+  }
+
+  $date = date('Y/m/d H:i:s');
+
+  error_log($date." -- ".$logMessage."\r\n", 3, "log/lpalog.log");
+}
 
 ?>
