@@ -1,2 +1,2 @@
 # ipa_ecomms
-PHP simple ecommerce. Canterbury project.
+PHP simple ecommerce. Canterbury's project.
