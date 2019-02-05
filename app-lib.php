@@ -46,11 +46,13 @@ function openDB() {
      *   - Replace the connection string tags below with your MySQL parameters
      */
     $db = new mysqli(
-      "localhost",
+      "lpaecomms-mysqldbserver.mysql.database.azure.com",
+      "mysqldbuser@lpaecomms-mysqldbserver",
+      "!JsonM2014",
       "lpa_ecomms",
-      "5XmvHX4djjzQRMRS",
-      "lpa_ecomms"
+      3306
     );
+    
     if ($db->connect_errno) {
       echo "Failed to connect to MySQL: (" .
         $db->connect_errno . ") " .
@@ -122,6 +124,7 @@ function build_navBlock() { ?>
       <div class="navItem" onclick="navMan('stock.php')">STOCK</div>
       <div class="navItem" onclick="navMan('sales.php')">SALES</div>
       <div class="navItem" onclick="navMan('products.php')">PRODUCTS</div>
+      <div class="navItem" onclick="navMan('multimedia.php')">MULTMEDIA</div>
       <div class="navItem" onclick="navMan('checkout.php')">CHECKOUT</div>
       <div class="menuSep"></div>
       <div class="navItem" onclick="navMan('login.php?killses=true')">Logout</div>

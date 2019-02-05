@@ -97,3 +97,19 @@
 2019/01/22 12:53:22 -- Login Successful! User:johntest
 2019/01/22 12:55:12 -- Page access: Sales User:johntest
 2019/01/22 12:55:13 -- Page access: Sales User:johntest
+2019/01/29 10:37:54 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:38:22 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:39:12 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:39:47 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:39:52 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:40:04 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:47:46 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:47:54 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:48:26 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:49:22 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:49:39 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 10:52:40 -- Exception!!! Message: [Call to a member function fetch_assoc() on null]. Stack trace: [#0 {main}]. File: [C:\wamp64\www\lpa_ecomms\login.php]. Line: [28].
+2019/01/29 11:04:03 -- Login failed!
+2019/02/05 11:29:16 -- Login failed!
+2019/02/05 11:29:25 -- Login failed!
+2019/02/05 11:29:43 -- Login Successful! User:Joao01
